@@ -39,7 +39,7 @@ ggplot(penguins, aes(bill_length_mm, flipper_length_mm, color = species)) +
         panel.background = element_rect(fill = penguins_hue[5], color = penguins_hue[5]), 
         plot.title = element_text(size = 36, colour = penguins_hue[6], 
                                   face = "bold", family = "Montserrat", hjust = 0.5),
-        plot.subtitle = element_markdown(size = 16, family = "Montserrat",hjust = .5 , 
+        plot.subtitle = element_markdown(size = 18, family = "Montserrat",hjust = .5 , 
                                          color = penguins_hue[6]),
         plot.caption = element_text(size = 12, color = penguins_hue[6]),
         panel.grid = element_line(color = penguins_hue[5]), 

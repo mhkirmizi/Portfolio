@@ -106,4 +106,4 @@ dl_helsinki |>
     legend.position = "none", 
     plot.background = element_rect(fill = "white")
   )
-ggsave("daylength.png", dpi = 360, width = 15, height = 12)
+ggsave("daylength.png", width = 1920, height = 1080, units = "px", dpi = 132)
