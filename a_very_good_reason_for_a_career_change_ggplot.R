@@ -11,6 +11,7 @@ subtitle <- "With Data Science rapidly growing in popularity, many are choosing 
 ## Colors
 hue <- c("Entry" = "#4A7169FF", "Middle" =  "#BEB59CFF", "Senior" = "#735231FF", "Executive" = "#49271BFF")
 ###
+df <- read_csv("D:/ML/Kaggle/DS_Salaries/salaries.csv")
 df <- df |> 
   filter(work_year == '2025' & job_title == "Data Scientist" & company_location == "US")
 
@@ -24,8 +25,7 @@ df <- df |>
                 "EX" = "Executive"), 
          levels = c("Entry", "Middle", "Senior", "Executive"), 
          ordered = TRUE))
-ggstatsplot::ggbetweenstats(df, experience_level, salary_in_usd)
-ggpubr::ggviolin(df, x = "experience_level", y = "salary_in_usd")
+
 ggplot(df, aes(experience_level, salary_in_usd, fill = experience_level)) + 
   geom_rain(alpha = .6) +
   geom_hline(yintercept =  100000, linetype = 'dashed', color = 'steelblue') +
